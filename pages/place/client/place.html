@@ -1,0 +1,22 @@
+<template name="place">
+	<h1>Places to go Visit</h1>
+	<hr>
+	<h2>Where would you want to go and for how much</h2>
+	Destination: <input type="text" class="js-dest"><br>
+	Date Entering: <input type="text" class="js-enter"><br>
+	Date Leaving: <input type="text" class="js-bye"><br>
+	Budget:
+	<br>
+	<input type="checkbox" class="js-low">0-100<br>
+	<input type="checkbox" class="js-med">100-250<br>
+	<input type="checkbox" class="js-high">250-500<br>
+	<button class="js-addtrip">Plan My Trip!</button>
+
+	<ul>
+		{{#each p in places}} 
+		<li>{{p.location}} is being visited on {{p.date_entered}}</li>
+		{{/each}}
+	</ul>
+	<h3>Here are some reviews for the place you want to go!</h3>
+
+</template>
