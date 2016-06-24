@@ -2,13 +2,16 @@
 <h1 style="font-family:Impact;">See What Other People Are Saying</h1>
 <br>
 <h2 style="font-family:sans-serif; font-size:20px; height:20px">Pick a destination from the list below and find out about things to do that other people found interesting!</h2>
-Destination: <input type="text" class="js-destinput">
+Destination: 
+<select>
+	<option>New York</option>
+	<option>Miami</option>
+	<option>Boston</option>
+	<option>Orlando</option>
+	<option>Seattle</option>
+	<option>Chicago</option>
+	<option>Los Angelos</option>
+</select>
 <button class="js-destsubmit">Search</button>
-<hr>
-  <ul>
-    {{#each rev1 in comments}}
-      <li> {{rev1}}</li>
-    {{/each}}
-  </ul>
- <hr>
+
 </template>

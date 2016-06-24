@@ -1,7 +1,6 @@
 Template.comments.helpers({
-	rev1 : function() {
-		rev1 = Comments.findOne({location:theplace}).val();
-		return rev1;
+	currentdest: function() {
+		return Comments.find({location:"New York"});
 	}
 })
 
@@ -10,5 +9,6 @@ Template.comments.events({
 		event.preventDefault();
 		console.log("the button was clicked.");
 		const theplace = $(".js-destinput").val();
+
 	}
 })
