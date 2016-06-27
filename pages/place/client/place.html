@@ -11,12 +11,16 @@
 	<input type="checkbox" class="js-med">100-250<br>
 	<input type="checkbox" class="js-high">250-500<br>
 	<button class="js-addtrip">Plan My Trip!</button>
+	<button class="js-removeAll">Remove My Trip!</button>
+
+	<input class="js-password" type="password">
 
 	<ul>
 		{{#each p in places}} 
 		<li>{{p.location}} is being visited on {{p.date_entered}}</li>
 		{{/each}}
 	</ul>
-	<h3>Here are some reviews for the place you want to go!</h3>
+
+
 
 </template>
