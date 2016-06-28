@@ -27,14 +27,5 @@ Template.place.events({
 		const pw = $(".js-password").val();
 		Meteor.call("removeAll", pw)
 	},
+	
 })
-function drawTiltedRectangle() {
-	drawContext = drawSpace.getContext("2d");
-	drawContext.strokeStyle="#00ff00"; // or green or "#fff"
-	drawContext.moveTo(100,100);
-	drawContext.lineTo(150,100);
-	drawContext.lineTo(125,200);
-	drawContext.lineTo(75,200);
-	drawContext.lineTo(100,100)
-	drawContext.stroke();
-}

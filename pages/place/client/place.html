@@ -11,9 +11,12 @@
 	<input type="checkbox" class="js-med">100-250<br>
 	<input type="checkbox" class="js-high">250-500<br>
 	<button class="js-addtrip">Plan My Trip!</button>
-	<button class="js-removeAll">Remove My Trip!</button>
 
-	<input class="js-password" type="password">
+	<div class= "bg-danger">
+  
+  		<input type="password" class="js-password" placeholder="Enter Password">
+  		<button class="js-removeAll">Remove</button>
+	</div>
 
 	<ul>
 		{{#each p in places}} 
