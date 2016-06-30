@@ -1,14 +1,25 @@
 Template.comments.helpers({
-	currentdest: function() {
-		return Comments.find({location:"New York"});
+	'destination' : function() {
+		return Reviews.find();
+	},
+	'selectedDest' : function() {
+		var selectedDest = Session.get('selectedDest');
+		return Reviews.findOne({_id: selectedDest});
 	}
+
 })
 
 Template.comments.events({
-	"click .js-destsubmit" : function(event) {
-		event.preventDefault();
-		console.log("the button was clicked.");
-		const theplace = $(".js-destinput").val();
+	'click .dest' : function() {
+		const loc = this._id;
+		Session.set('selectedDest', loc);
 
+	},
+	'click .js-post' : function() {
+		console.log("ok");
+		const rev = $(".js-yourreview").val();
+		const city = $(".js-city").val();
+		Meteor.call("updateReview", rev, city);
 	}
-})
+
+});
