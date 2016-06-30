@@ -1,0 +1,13 @@
+<template name="profiles">
+	{{#if currentUser}} 
+	<h1>List of Profiles!</h1><br>
+		<ol>
+			{{#each pro}} 
+				<li>{{fir}}, {{las}}, {{nn}}, {{em}}, {{b}}</li>
+			{{/each}}
+		</ol>
+	{{else}}
+		You must log in!
+	{{/if}}
+	
+</template>
