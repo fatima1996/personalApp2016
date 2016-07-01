@@ -1,8 +1,15 @@
 Template.settings.helpers({
-	currentUser : function() {
-		return Settings.find().currentUser;
-	}
+	 yourgreeting : function() {
+	 	return Settings.findOne();
+	 }
 });
 Template.settings.events({
+	"click .js-submit" : function(event){
+		event.preventDefault();
+		const user = Meteor.userId();
+		const greeting = $(".js-greeting").val();
+		const setting = {user:user, g: greeting}
+		Meteor.call("entersetting", setting);
 
-});
+	},
+})

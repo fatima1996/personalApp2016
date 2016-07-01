@@ -4,14 +4,22 @@ Meteor.publish('hello', function() {
 	} else {
 		this.ready();
 	}
-})
+});
 
 Meteor.publish("reviews", function() {
 	return Reviews.find();
 });
-Meteor.publish('settings', function () { 
-	return Settings.find({_id: this.userId}, {fields: {profile: 1, username: 1}});
+Meteor.publish("theSettings", function(){
+    if(this.userId){
+      return Settings.find();
+    }else{
+      this.ready();
+    }
 });
-//Meteor.publish('userData', function () { 
-	//return Meteor.users.find({{_id: this.userId}}, {fields: {createdAt: 1}}); 
-//}); 
+Meteor.publish("settings", function(userId) {
+	if(this.userId){
+		return Meteor.users.find({_id: userId}, {fields: {profile:1, "services.google.email":1}});
+	} else{
+		this.ready();
+	}
+});

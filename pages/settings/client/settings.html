@@ -1,5 +1,10 @@
 <template name="settings">
 	{{#if currentUser}} 
-	<h1>Hello {{currentUser}}</h1>
+		<h1>Hello! Your personalized greeting: </h1>
+		<br>
+		<input type="text" class="js-greeting">
+		<button class="js-submit">Submit</button>
+		<br>
+		<h2 style="color:blue; font-family:verdana;">{{yourgreeting.g}}</h2>
 	{{/if}}
 </template>
