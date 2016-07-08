@@ -6,6 +6,9 @@ Meteor.publish("reviews", function() {
 Meteor.publish("places", function() {
   return Places.find();
 });
+Meteor.publish("bio", function() {
+  return Bio.find();
+});
 Meteor.publish("thePl", function() {
   return Pl.find();
 });
