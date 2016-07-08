@@ -1,17 +1,24 @@
-Meteor.publish('hello', function() {
-	if(this.userId) {
-		return Places.find({addedBy: this.userId});
-	} else {
-		this.ready();
-	}
-});
+
 
 Meteor.publish("reviews", function() {
-	return Reviews.find();
+	return Rev.find();
+});
+Meteor.publish("places", function() {
+  return Places.find();
+});
+Meteor.publish("thePl", function() {
+  return Pl.find();
 });
 Meteor.publish("theSettings", function(){
     if(this.userId){
       return Settings.find();
+    }else{
+      this.ready();
+    }
+});
+Meteor.publish("planTrip", function(){
+    if(this.userId){
+      return Places.find();
     }else{
       this.ready();
     }

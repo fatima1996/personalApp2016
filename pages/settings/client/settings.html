@@ -5,6 +5,27 @@
 		<input type="text" class="js-greeting">
 		<button class="js-submit">Submit</button>
 		<br>
-		<h2 style="color:blue; font-family:verdana;">{{yourgreeting.g}}</h2>
+		<h2 style="color:blue; font-family:verdana;">{{yourgreeting.g}}</h2><br><br>
+
+		<form>
+  			<div class="form-group">
+    			<label for="d">Destination</label>
+    			<input type="text" class="js-d" id="d" placeholder="Destination">
+ 			</div>
+ 			 <div class="form-group">
+    			<label for="de">Date entering</label>
+    			<input type="text" class="js-de" id="de" placeholder="Date Entering">
+ 			</div>
+ 			<div class="form-group">
+    			<label for="dl">Date leaving</label>
+    			<input type="text" class="dl" id="js-dl" placeholder="Date Leaving">
+ 			</div>
+ 			 <button type="sumbit" class="js-enter">Submit</button>
+ 			 <button class="js-remove">Remove</button>
+		</form>
+
+		{{#each p in places}} 
+			<li>You are visiting {{p.location}} on {{p.date_entered}} and leaving on {{p.date_leaving}}</li>
+		{{/each}}
 	{{/if}}
 </template>

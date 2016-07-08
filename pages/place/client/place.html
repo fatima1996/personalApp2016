@@ -1,29 +1,25 @@
 <template name="place">
-	<h1>Places to go Visit</h1>
-	<hr>
-	<h2>Where would you want to go and for how much</h2>
-	Destination: <input type="text" class="js-dest"><br>
-	Date Entering: <input type="text" class="js-enter"><br>
-	Date Leaving: <input type="text" class="js-bye"><br>
-	Budget:
-	<br>
-	<input type="checkbox" class="js-low">0-100<br>
-	<input type="checkbox" class="js-med">100-250<br>
-	<input type="checkbox" class="js-high">250-500<br>
-	<button class="js-addtrip">Plan My Trip!</button>
+	<h1>See What's Happening Around You</h1>
+	<img src="http://blog.raysoutdoors.com.au/wp-content/uploads/2014/10/TravellingTips_TOPBANNER.jpg" class="img-rounded" height="300" width="1000">
+	<form>
+		<div class="form-group"><br>
+			<label for="destination">Destination:</label>
+    		<input type="text" class="js-loc" id="destination"> 
+		</div>
+		<div class="form-group"><br>
+			<label for="budget">Budget:</label>
+    		<select class="js-budget">
+    			<option>free</option>
+    			<option>$25 or less</option>
+    		</select>
+		</div>
+		<button class="js-enter">Enter</button>
+	</form>
+	<h2>Here are some links that match your criteria:</h2>
 
-	<div class= "bg-danger">
-  
-  		<input type="password" class="js-password" placeholder="Enter Password">
-  		<button class="js-removeAll">Remove</button>
-	</div>
-
-	<ul>
-		{{#each p in places}} 
-		<li>{{p.location}} is being visited on {{p.date_entered}}</li>
+	<ol>
+		{{#each trip}}
+			<br><li>{{link}}</li>
 		{{/each}}
-	</ul>
-
-
-
+	</ol>
 </template>

@@ -1,10 +1,10 @@
 Template.comments.helpers({
 	'destination' : function() {
-		return Reviews.find();
+		return Rev.find();
 	},
 	'selectedDest' : function() {
 		var selectedDest = Session.get('selectedDest');
-		return Reviews.findOne({_id: selectedDest});
+		return Rev.findOne({_id: selectedDest});
 	}
 
 })
