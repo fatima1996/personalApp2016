@@ -3,6 +3,15 @@
 Meteor.publish("reviews", function() {
 	return Rev.find();
 });
+Meteor.publish("donations", function() {
+  return Don.find();
+});
+Meteor.publish("im", function() {
+  return Images.find();
+});
+Meteor.publish("ches", function() {
+  return Che.find();
+});
 Meteor.publish("places", function() {
   return Places.find();
 });

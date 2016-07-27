@@ -57,4 +57,8 @@ Meteor.startup(function(){
 		Rev.insert({location:"Chicago", review:"Chicago has been one of the most beautiful cities I have ever been able to experience in my life. I felt like I was in the better version of New York. It was bigger, cleaner, and the people were so friendly and there is so much to see. "});
 		Rev.insert({location:"Miami", review:"I love this place. No doubt about it, this city will forever be the city that I will proudly say I'm from. From the variety of cultures and languages to the poorest and richest, this city has something for everybody, and it's a good thing too because everyone's trying to grab a piece of it. "});
 	}
+	if (Images.find().count()==0) {
+		Images.insert({name:"Hillary", img:"https://5d326107-a-850057e4-s-sites.googlegroups.com/a/brandeis.edu/jbs-2016-cosi/courses/cosi152aj/quizzes/makeup-1/hillary.jpg?attachauth=ANoY7criidCovKHlVqiIRm0j19qVrUk_KOFxvFz02xikM8F4gnG8jCsVfponZw1pi09bbSTi7gpdZBkkzc0xtOdsRddzQ14mdwGwpnEEK8kmc-ek-vvNfPZJteqzLlFG5oIZbDMH_hAoE3nnWo6w4psyTGQan3Pc4SNhGL9_xzs6w-x8gEIqQliRlE7Mn5XtWBzQryQn3PalNvQEJIu4C4bAPTveAK0kr01_4dh0TGnD9sGNT2bpRNKkJBJqQU9plc4VxFNabUnmJhT2wUIFboSqQN323-2BJg%3D%3D&attredirects=0"});
+		Images.insert({name:"Trump", img:"https://5d326107-a-850057e4-s-sites.googlegroups.com/a/brandeis.edu/jbs-2016-cosi/courses/cosi152aj/quizzes/makeup-1/trump.jpg?attachauth=ANoY7coPZjtNU6KeMrfUM9ZdPg01xDmdews3KRilzHwd-8mHQazHvYGAA6lxca8MbbyeIFERugjqQlOnsIaCMVK9iFi-DRurntW3e9Qr2huvhIhTzO_H5Grq8oJUkICiY-KNQ3o8jBrKF_qSuLYUbuF14D4zXXpIbh4RRKoJUogO7AzlEFB_RvPultBFVrMA8FHfRdEKPvvgqtneQh8gIeVSTUqS6j8KhXbOC8sShjkCCTKoIFJBpvLZ8TvTyqQfre-sGpLUpx52&attredirects=0"});
+	}
 });

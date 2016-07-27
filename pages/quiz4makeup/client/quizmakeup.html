@@ -1,0 +1,48 @@
+<template name="quizmakeup">
+	<h1>Make a Donation</h1>
+	<select class="js-candidates">
+		<option class="js-Hillary">Hillary</option>
+		<option class="js-Trump">Trump</option>
+	</select><br>
+	Your Name: <input type="text" class="js-name"><br>
+	Amount : <input type="text" class="js-amount"><br>
+	<button class="js-report">Report Donation</button>
+
+	<h2>Donations Reported on this site</h2>
+	{{#each reported}}
+		<li class="js-link"><a href="{{href}}">{{name}} for {{cand}}</a></li>
+	{{/each}}
+</template>
+
+<template name="info">
+	{{#each image}}
+		<img src="{{img}}" width="200" height="200">
+	{{/each}}
+	{{#each donat}}
+		<br><br>
+		<h1>{{name}} gave ${{amount}} to {{cand}}</h1><br>
+		<h2>Here are all of {{name}}'s donations</h2>
+		<br>
+	{{/each}}
+
+	<table class="table table-bordered">
+		<tr class="table-bordered">
+			<th>Donor</th>
+			<th>For Whom</th>
+			<th>When</th>
+			<th>Amount</th>
+			<th>delete?</th>
+		</tr>
+		{{#each finding}}
+			<tr class="table-bordered">
+				<td>{{name}}</td>
+				<td>{{cand}}</td>
+				<td>{{createdAt}}</td>
+				<td>{{amount}}</td>
+				<td class="js-hi"><span class="js-delete glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+			</tr>
+		{{/each}}
+	</table>
+	
+	
+</template>
